@@ -1,5 +1,7 @@
 package net.allthemods.alltheores.datagen.data.recipe.actuallyadditions;
 
+import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
+
 import de.ellpeck.actuallyadditions.data.CrushingRecipeGenerator.CrushingBuilder;
 import de.ellpeck.actuallyadditions.mod.crafting.CrushingRecipe;
 import net.allthemods.alltheores.content.blocks.sets.ATOSetHelper;
@@ -32,7 +34,7 @@ public class ATOAACrushingRecipeProvider extends RecipeProvider {
             new CrushingBuilder(
                     Ingredient.of(set.INGOT_TAG),
                     new CrushingRecipe.CrushingResult(new ItemStack(set.DUST, 1), 1.0f))
-                    .save(recipeOutput, crushingRecipeDir(String.format("%s/from_dust", set.name)));
+                    .save(recipeOutput.withConditions(new ModLoadedCondition("actuallyadditions")), crushingRecipeDir(String.format("%s/from_dust", set.name)));
         });
 
         ATOSetHelper.applyToIngot(set -> {
@@ -41,7 +43,7 @@ public class ATOAACrushingRecipeProvider extends RecipeProvider {
                     Ingredient.of(set.ORES.ORE_BLOCK_ITEM_TAG),
                     new CrushingRecipe.CrushingResult(new ItemStack(set.DUST, 2), 1.0f))
                     .addResult2(new CrushingRecipe.CrushingResult(new ItemStack(set.DUST, 1), 0.5f))
-                    .save(recipeOutput, crushingRecipeDir(String.format("%s/from_ore", set.name)));
+                    .save(recipeOutput.withConditions(new ModLoadedCondition("actuallyadditions")), crushingRecipeDir(String.format("%s/from_ore", set.name)));
 
             // Raw -> Dust
             CrushingBuilder rawBuilder = new CrushingBuilder(
@@ -51,13 +53,13 @@ public class ATOAACrushingRecipeProvider extends RecipeProvider {
             if (ATORegistry.getByproducts().containsKey(set.RAW.get())) {
                 rawBuilder.addResult2(new CrushingRecipe.CrushingResult(new ItemStack(ATORegistry.getByproducts().get(set.RAW.get()).first, 1), ATORegistry.getByproducts().get(set.RAW.get()).second));
             }
-            rawBuilder.save(recipeOutput, crushingRecipeDir(String.format("%s/from_raw", set.name)));
+            rawBuilder.save(recipeOutput.withConditions(new ModLoadedCondition("actuallyadditions")), crushingRecipeDir(String.format("%s/from_raw", set.name)));
 
             // Raw Block -> 12x Dust
             new CrushingBuilder(
                     Ingredient.of(set.RAW_BLOCK_ITEM_TAG),
                     new CrushingRecipe.CrushingResult(new ItemStack(set.DUST, 12), 1.0f))
-                    .save(recipeOutput, crushingRecipeDir(String.format("%s/from_raw_block", set.name)));
+                    .save(recipeOutput.withConditions(new ModLoadedCondition("actuallyadditions")), crushingRecipeDir(String.format("%s/from_raw_block", set.name)));
         });
 
         ATOSetHelper.applyToGem(set -> {
@@ -65,14 +67,14 @@ public class ATOAACrushingRecipeProvider extends RecipeProvider {
             new CrushingBuilder(
                     Ingredient.of(set.ORES.ORE_BLOCK_ITEM_TAG),
                     new CrushingRecipe.CrushingResult(new ItemStack(set.GEM, 6), 1.0f))
-                    .save(recipeOutput, crushingRecipeDir(String.format("%s/from_ore", set.name)));
+                    .save(recipeOutput.withConditions(new ModLoadedCondition("actuallyadditions")), crushingRecipeDir(String.format("%s/from_ore", set.name)));
 
             // Gem -> Dust
             new CrushingBuilder(
                     Ingredient.of(set.GEM_TAG),
                     new CrushingRecipe.CrushingResult(new ItemStack(set.DUST, 1), 1.0f))
                     .addResult2(new CrushingRecipe.CrushingResult(new ItemStack(set.DUST, 1), 0.5f))
-                    .save(recipeOutput, crushingRecipeDir(String.format("%s/from_gem", set.name)));
+                    .save(recipeOutput.withConditions(new ModLoadedCondition("actuallyadditions")), crushingRecipeDir(String.format("%s/from_gem", set.name)));
         });
 
         ATOSetHelper.applyToVanillaIngot(set -> {
@@ -80,7 +82,7 @@ public class ATOAACrushingRecipeProvider extends RecipeProvider {
             new CrushingBuilder(
                     Ingredient.of(set.INGOT_TAG),
                     new CrushingRecipe.CrushingResult(new ItemStack(set.DUST, 1), 1.0f))
-                    .save(recipeOutput, crushingRecipeDir(String.format("%s/from_ingot", set.name)));
+                    .save(recipeOutput.withConditions(new ModLoadedCondition("actuallyadditions")), crushingRecipeDir(String.format("%s/from_ingot", set.name)));
         });
 
         ATOSetHelper.applyToVanillaGem(set -> {
@@ -88,7 +90,7 @@ public class ATOAACrushingRecipeProvider extends RecipeProvider {
             new CrushingBuilder(
                     Ingredient.of(set.GEM_TAG),
                     new CrushingRecipe.CrushingResult(new ItemStack(set.DUST, 1), 1.0f))
-                    .save(recipeOutput, crushingRecipeDir(String.format("%s/from_gem", set.name)));
+                    .save(recipeOutput.withConditions(new ModLoadedCondition("actuallyadditions")), crushingRecipeDir(String.format("%s/from_gem", set.name)));
         });
     }
 }
