@@ -2,20 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "a": {
-      "tag": "c:ingots/signalum"
-    },
-    "h": {
-      "tag": "alltheores:ore_hammers"
-    }
+    "a": "#c:ingots/signalum",
+    "h": "#alltheores:ore_hammers"
   },
   "pattern": [
-    "   ",
     "  a",
     "ha "
   ],
   "result": {
-    "count": 1,
     "id": "alltheores:signalum_rod"
   }
 }

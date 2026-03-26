@@ -2,15 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "alltheores:ore_hammers"
-    },
-    {
-      "tag": "c:gems/cinnabar"
-    }
+    "#alltheores:ore_hammers",
+    "#c:gems/cinnabar"
   ],
   "result": {
-    "count": 1,
     "id": "alltheores:cinnabar_dust"
   }
 }

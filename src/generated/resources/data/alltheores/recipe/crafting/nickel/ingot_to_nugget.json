@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:ingots/nickel"
+  ],
+  "result": {
+    "count": 9,
+    "id": "alltheores:nickel_nugget"
+  }
+}

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "alltheores:ore_hammers"
-    },
-    {
-      "tag": "c:raw_materials/zinc"
-    }
+    "#alltheores:ore_hammers",
+    "#c:raw_materials/zinc"
   ],
   "result": {
     "count": 2,

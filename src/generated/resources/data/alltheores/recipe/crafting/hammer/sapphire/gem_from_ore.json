@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "alltheores:ore_hammers"
-    },
-    {
-      "tag": "c:ores/sapphire"
-    }
+    "#alltheores:ore_hammers",
+    "#c:ores/sapphire"
   ],
   "result": {
     "count": 2,

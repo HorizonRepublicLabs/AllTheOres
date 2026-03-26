@@ -2,20 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "a": {
-      "tag": "c:ingots/iridium"
-    },
-    "h": {
-      "tag": "alltheores:ore_hammers"
-    }
+    "a": "#c:ingots/iridium",
+    "h": "#alltheores:ore_hammers"
   },
   "pattern": [
-    "   ",
     "ha ",
     "a  "
   ],
   "result": {
-    "count": 1,
     "id": "alltheores:iridium_plate"
   }
 }

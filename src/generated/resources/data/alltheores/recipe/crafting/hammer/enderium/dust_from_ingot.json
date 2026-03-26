@@ -2,15 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "alltheores:ore_hammers"
-    },
-    {
-      "tag": "c:ingots/enderium"
-    }
+    "#alltheores:ore_hammers",
+    "#c:ingots/enderium"
   ],
   "result": {
-    "count": 1,
     "id": "alltheores:enderium_dust"
   }
 }

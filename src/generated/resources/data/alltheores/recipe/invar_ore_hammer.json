@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "a": {
-      "tag": "c:storage_blocks/invar"
-    },
-    "s": {
-      "tag": "c:rods/wooden"
-    }
+    "a": "#c:storage_blocks/invar",
+    "s": "#c:rods/wooden"
   },
   "pattern": [
     " as",
@@ -15,7 +11,6 @@
     "s  "
   ],
   "result": {
-    "count": 1,
     "id": "alltheores:invar_ore_hammer"
   }
 }

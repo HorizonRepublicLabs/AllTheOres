@@ -3,7 +3,6 @@
     "alltheores:salt_ore",
     "alltheores:deepslate_salt_ore",
     "alltheores:nether_salt_ore",
-    "alltheores:end_salt_ore",
-    "alltheores:other_salt_ore"
+    "alltheores:end_salt_ore"
   ]
 }

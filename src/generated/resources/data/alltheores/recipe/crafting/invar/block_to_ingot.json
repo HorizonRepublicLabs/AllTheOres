@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:storage_blocks/invar"
+  ],
+  "result": {
+    "count": 9,
+    "id": "alltheores:invar_ingot"
+  }
+}

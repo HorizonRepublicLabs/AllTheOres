@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "alltheores:ore_hammers"
-    },
-    {
-      "tag": "c:ores/netherite_scrap"
-    }
+    "#alltheores:ore_hammers",
+    "minecraft:ancient_debris"
   ],
   "result": {
     "count": 2,

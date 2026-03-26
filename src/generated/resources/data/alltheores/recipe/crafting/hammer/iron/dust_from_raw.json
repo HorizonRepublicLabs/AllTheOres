@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "alltheores:ore_hammers"
-    },
-    {
-      "tag": "c:raw_materials/iron"
-    }
+    "#alltheores:ore_hammers",
+    "#c:raw_materials/iron"
   ],
   "result": {
     "count": 2,
