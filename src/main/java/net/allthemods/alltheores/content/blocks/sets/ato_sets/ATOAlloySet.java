@@ -41,7 +41,11 @@ public class ATOAlloySet extends ATOMaterialSet {
 
 
     public ATOAlloySet(String name, int fluidColor) {
-        super(name, ESetTypes.ALLOY);
+        this(name, fluidColor, ESetTypes.ALLOY);
+    }
+
+    public ATOAlloySet(String name, int fluidColor, ESetTypes type) {
+        super(name, type);
         instances.add(this);
 
         // Item Tags

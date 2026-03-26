@@ -54,6 +54,9 @@ public class ATOMaterialSet extends BlockSet {
 
         this.type = type;
 
+        // DEBUG: log material init
+        System.out.println(String.format("ATOMaterialSet init: name=%s, type=%s", name, type));
+
         // Item Tags
         DUST_TAG = ItemTags.create(Reference.dust(name));
         // Block Tags
@@ -87,7 +90,7 @@ public class ATOMaterialSet extends BlockSet {
                 throw new IllegalArgumentException("Invalid Type: " + name);
         }
 
-        // BlockItems
-        BLOCK_ITEM = blockItem(BLOCK);
+        // BlockItems - register with explicit path used above
+        BLOCK_ITEM = blockItem(String.format("%s_block", name), BLOCK);
     }
 }

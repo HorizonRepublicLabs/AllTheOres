@@ -27,13 +27,13 @@ import java.util.Map;
 
 public class ATORegistry {
 
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.createBlocks(Reference.MOD_ID);
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.createItems(Reference.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = ATORegisters.BLOCKS;
+    public static final DeferredRegister<Item> ITEMS = ATORegisters.ITEMS;
 
-    public static final DeferredRegister<Block> FLUID_BLOCKS = DeferredRegister.createBlocks(Reference.MOD_ID);
-    public static final DeferredRegister<Item> FLUID_ITEMS = DeferredRegister.createItems(Reference.MOD_ID);
-    public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(Registries.FLUID, Reference.MOD_ID);
-    public static final DeferredRegister<FluidType> FLUID_TYPES = DeferredRegister.create(NeoForgeRegistries.FLUID_TYPES, Reference.MOD_ID);
+    public static final DeferredRegister<Block> FLUID_BLOCKS = ATORegisters.FLUID_BLOCKS;
+    public static final DeferredRegister<Item> FLUID_ITEMS = ATORegisters.FLUID_ITEMS;
+    public static final DeferredRegister<Fluid> FLUIDS = ATORegisters.FLUIDS;
+    public static final DeferredRegister<FluidType> FLUID_TYPES = ATORegisters.FLUID_TYPES;
 
     /*
      * Checklist for adding new Resources:
@@ -95,23 +95,26 @@ public class ATORegistry {
     // This setup is kina weird, but it'll crash with a NullPointer if you define it directly
     public static Map<ItemLike, Pair<ItemLike, Float>> getByproducts() {
         return Map.of(
-                ALUMINUM.RAW.get(), Pair.of(ZINC.DUST.get(), 0.05f),
-                LEAD.RAW.get(), Pair.of(SILVER.DUST.get(), 0.45f),
-                NICKEL.RAW.get(), Pair.of(PLATINUM.DUST.get(), 0.25f),
-                OSMIUM.RAW.get(), Pair.of(IRIDIUM.DUST.get(), 0.3f),
-                PLATINUM.RAW.get(), Pair.of(GOLD.DUST.get(), 0.1f),
-                SILVER.RAW.get(), Pair.of(LEAD.DUST.get(), 0.45f),
-                TIN.RAW.get(), Pair.of(IRON.DUST.get(), 0.2f),
-                URANIUM.RAW.get(), Pair.of(LEAD.DUST.get(), 0.5f),
-                ZINC.RAW.get(), Pair.of(ALUMINUM.DUST.get(), 0.05f),
-                IRIDIUM.RAW.get(), Pair.of(OSMIUM.DUST.get(), 0.3f)
+                ALUMINUM.RAW.get(), Pair.of(ALUMINUM.DUST.get(), 0.05f),
+                LEAD.RAW.get(), Pair.of(LEAD.DUST.get(), 0.45f),
+                NICKEL.RAW.get(), Pair.of(NICKEL.DUST.get(), 0.25f),
+                OSMIUM.RAW.get(), Pair.of(OSMIUM.DUST.get(), 0.3f),
+                PLATINUM.RAW.get(), Pair.of(PLATINUM.DUST.get(), 0.1f),
+                SILVER.RAW.get(), Pair.of(SILVER.DUST.get(), 0.45f),
+                TIN.RAW.get(), Pair.of(TIN.DUST.get(), 0.2f),
+                URANIUM.RAW.get(), Pair.of(URANIUM.DUST.get(), 0.5f),
+                ZINC.RAW.get(), Pair.of(ZINC.DUST.get(), 0.05f),
+                IRIDIUM.RAW.get(), Pair.of(IRIDIUM.DUST.get(), 0.3f)
         );
     }
 
+    public static void init() {
+        // Just a placeholder to ensure the class is loaded during mod initialization
+    }
     // ###################### HELPER METHODS
 
-    public static DeferredHolder<Item, BlockItem> blockItem(DeferredHolder<Block, Block> block) {
-        return ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+    public static DeferredHolder<Item, BlockItem> blockItem(String path, DeferredHolder<Block, Block> block) {
+        return ITEMS.register(path, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static DeferredHolder<Item, Item> item(String path) {
@@ -119,5 +122,4 @@ public class ATORegistry {
     }
 
 }
-
 

@@ -2,7 +2,7 @@ plugins {
     id 'idea'
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '1.0.23'
+    id 'net.neoforged.moddev' version '2.0.140'
 }
 
 tasks.named('wrapper', Wrapper).configure {
@@ -38,15 +38,12 @@ base {
     archivesName = mod_id
 }
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
 neoForge {
     version = project.neo_version
 
-    parchment {
-        mappingsVersion = project.parchment_mappings_version
-        minecraftVersion = project.parchment_minecraft_version
-    }
+
 
     // accessTransformers = project.files('src/main/resources/META-INF/accesstransformer.cfg')
 
@@ -67,10 +64,7 @@ neoForge {
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
 
-        data {
-            data()
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
-        }
+
 
         configureEach {
             // "SCAN": For mods scan.
@@ -95,23 +89,23 @@ configurations {
 }
 
 dependencies {
-    compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
-    runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+   // compileOnly "mezz.jei:jei-26.1-snapshot-6-neoforge-api:${jei_version}"
+   // runtimeOnly "mezz.jei:jei-26.1-snapshot-6-neoforge:${jei_version}"
 
-    compileOnly "dev.emi:emi-neoforge:${emi_version}:api"
-    runtimeOnly "dev.emi:emi-neoforge:${emi_version}"
+    //compileOnly "dev.emi:emi-neoforge:${emi_version}:api"
+    //runtimeOnly "dev.emi:emi-neoforge:${emi_version}"
 
-    implementation "curse.maven:${mekanism}"
+    //implementation "curse.maven:${mekanism}"
 
-    implementation "com.enderio:${ender_io_base}"
-    implementation "com.enderio:${ender_io_base}:api"
-    implementation "com.enderio:${ender_io_machines}"
-    implementation "com.enderio:${ender_io_machines}:api"
+    //implementation "com.enderio:${ender_io_base}"
+    //implementation "com.enderio:${ender_io_base}:api"
+    //implementation "com.enderio:${ender_io_machines}"
+    //implementation "com.enderio:${ender_io_machines}:api"
 
-    implementation "curse.maven:${immersiveengineering}"
+    //implementation "curse.maven:${immersiveengineering}"
 
-    implementation "curse.maven:${actually_additions}"
-    implementation "curse.maven:${adorned}"
+    //implementation "curse.maven:${actually_additions}"
+    //implementation "curse.maven:${adorned}"
 }
 
 tasks.withType(ProcessResources).configureEach {

@@ -6,13 +6,15 @@ import net.allthemods.alltheores.content.blocks.sets.ESetTypes;
 import net.allthemods.alltheores.infos.Reference;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.neoforged.neoforge.common.world.BiomeModifier;
@@ -95,13 +97,13 @@ public class ATOOreSet extends BlockSet {
         this.count = count;
 
         // Feature
-        CONFIGURED_ORE_FEATURE = ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Reference.MOD_ID, String.format("ore_%s", name)));
-        PLACED_ORE_FEATURE = ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Reference.MOD_ID, String.format("ore_%s_placed", name)));
+        CONFIGURED_ORE_FEATURE = ResourceKey.create(Registries.CONFIGURED_FEATURE, Identifier.fromNamespaceAndPath(Reference.MOD_ID, String.format("ore_%s", name)));
+        PLACED_ORE_FEATURE = ResourceKey.create(Registries.PLACED_FEATURE, Identifier.fromNamespaceAndPath(Reference.MOD_ID, String.format("ore_%s_placed", name)));
 
         // Biome Modifier
-        OVERWORLD_BIOME_MODIFIER = ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(Reference.MOD_ID, String.format("%s_overworld", name)));
-        NETHER_BIOME_MODIFIER = ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(Reference.MOD_ID, String.format("%s_nether", name)));
-        END_MODIFIER = ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(Reference.MOD_ID, String.format("%s_end", name)));
+        OVERWORLD_BIOME_MODIFIER = ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, Identifier.fromNamespaceAndPath(Reference.MOD_ID, String.format("%s_overworld", name)));
+        NETHER_BIOME_MODIFIER = ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, Identifier.fromNamespaceAndPath(Reference.MOD_ID, String.format("%s_nether", name)));
+        END_MODIFIER = ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, Identifier.fromNamespaceAndPath(Reference.MOD_ID, String.format("%s_end", name)));
 
         switch (type) {
             case INGOT:
@@ -131,20 +133,21 @@ public class ATOOreSet extends BlockSet {
         DROP = drop;
 
         // Blocks
-        STONE_ORE_BLOCK = BLOCKS.register(String.format("%s_ore", name), OreBlockStone::new);
-        SLATE_ORE_BLOCK = BLOCKS.register(String.format("deepslate_%s_ore", name), OreBlockSlate::new);
-        NETHER_ORE_BLOCK = BLOCKS.register(String.format("nether_%s_ore", name), OreBlockNether::new);
-        END_ORE_BLOCK = BLOCKS.register(String.format("end_%s_ore", name), OreBlockEnd::new);
-        OTHER_ORE_BLOCK = BLOCKS.register(String.format("other_%s_ore", name), OreBlockOther::new);
+        STONE_ORE_BLOCK = BLOCKS.register(String.format("%s_ore", name), () -> new OreBlockStone(OreBlockStone.xpRange, BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.IRON_ORE).strength(3.0f, 3.0f)));
+        SLATE_ORE_BLOCK = BLOCKS.register(String.format("deepslate_%s_ore", name), () -> new OreBlockSlate(OreBlockSlate.xpRange, BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.DEEPSLATE_IRON_ORE).strength(4.5f, 3.0f)));
+
+        NETHER_ORE_BLOCK = BLOCKS.register(String.format("nether_%s_ore", name), () -> new OreBlockNether(OreBlockNether.xpRange, BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.NETHER_QUARTZ_ORE).strength(3.0f, 3.0f)));
+        END_ORE_BLOCK = BLOCKS.register(String.format("end_%s_ore", name), () -> new OreBlockEnd(OreBlockEnd.xpRange, BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).strength(30.0f, 600.0f)));
+        OTHER_ORE_BLOCK = BLOCKS.register(String.format("other_%s_ore", name), () -> new OreBlockOther(OreBlockOther.xpRange, BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).strength(50.0f, -1.0f)));
 
         DROP_BLOCK = drop_block;
 
         // BlockItems
-        STONE_ORE_BLOCK_ITEM = blockItem(STONE_ORE_BLOCK);
-        SLATE_ORE_BLOCK_ITEM = blockItem(SLATE_ORE_BLOCK);
-        NETHER_ORE_BLOCK_ITEM = blockItem(NETHER_ORE_BLOCK);
-        END_ORE_BLOCK_ITEM = blockItem(END_ORE_BLOCK);
-        OTHER_ORE_BLOCK_ITEM = blockItem(OTHER_ORE_BLOCK);
+        STONE_ORE_BLOCK_ITEM = blockItem(String.format("%s_ore", name), STONE_ORE_BLOCK);
+        SLATE_ORE_BLOCK_ITEM = blockItem(String.format("deepslate_%s_ore", name), SLATE_ORE_BLOCK);
+        NETHER_ORE_BLOCK_ITEM = blockItem(String.format("nether_%s_ore", name), NETHER_ORE_BLOCK);
+        END_ORE_BLOCK_ITEM = blockItem(String.format("end_%s_ore", name), END_ORE_BLOCK);
+        OTHER_ORE_BLOCK_ITEM = blockItem(String.format("other_%s_ore", name), OTHER_ORE_BLOCK);
 
         DROP_BLOCK_ITEM = DeferredHolder.create(Registries.ITEM, drop_block.getId());
     }

@@ -22,7 +22,7 @@ public class VanillaIngotSet extends VanillaSet {
         return instances;
     }
 
-    public final MekanismSet MEK;
+    //public final MekanismSet MEK;
     public final ATOFluidSet FLUID;
 
     // Item Tags
@@ -79,11 +79,11 @@ public class VanillaIngotSet extends VanillaSet {
         RAW_BLOCK = rawBlock;
         BLOCK = block;
 
-        // Block Items
-        RAW_BLOCK_ITEM = block.asItem().getDefaultInstance().getItem();
-        BLOCK_ITEM = block.asItem().getDefaultInstance().getItem();
+        // Block Items - avoid getDefaultInstance() during static init
+        RAW_BLOCK_ITEM = rawBlock.asItem();
+        BLOCK_ITEM = block.asItem();
 
-        MEK = ModList.get().isLoaded("mekanism") ? new MekanismSet(name, fluidColor, block) : null;
+        //MEK = ModList.get().isLoaded("mekanism") ? new MekanismSet(name, fluidColor, block) : null;
         FLUID = new ATOFluidSet(name, fluidColor);
     }
 }

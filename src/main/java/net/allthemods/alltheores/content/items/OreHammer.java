@@ -2,29 +2,20 @@ package net.allthemods.alltheores.content.items;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
+
+import javax.annotation.Nullable;
 
 public class OreHammer extends Item {
 
     public OreHammer(Item.Properties properties, int durability) {
 
-        super(properties.durability(durability).setNoRepair());
+        super(properties.durability(durability).setNoCombineRepair());
+
 
     }
 
-    @Override
-    public boolean hasCraftingRemainingItem(ItemStack stack) {
-        return (stack.getItem() instanceof OreHammer);
-    }
 
-    @Override
-    public ItemStack getCraftingRemainingItem(ItemStack itemStack) {
-        int durability = itemStack.getDamageValue();
-        itemStack.setDamageValue(durability + 1);
-        if (itemStack.getDamageValue() == itemStack.getMaxDamage()) {
-            return ItemStack.EMPTY;
-        }
 
-        return itemStack.copy();
-    }
 
 }

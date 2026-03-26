@@ -5,7 +5,7 @@ import net.allthemods.alltheores.content.fluids.MoltenBlock;
 import net.allthemods.alltheores.infos.Reference;
 import net.allthemods.alltheores.registry.ATORegistry;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.FluidTags;
@@ -78,7 +78,7 @@ public class ATOFluidSet extends BlockSet {
         MOLTEN_BLOCK = ATORegistry.FLUID_BLOCKS.register(String.format("molten_%s", name), () -> new MoltenBlock(MOLTEN.get(), Block.Properties.of()
                 .strength(100.0F)
                 .speedFactor(0.7F)
-                .noCollission()
+                .noCollision()
                 .liquid()
                 .replaceable()
         ));
@@ -87,10 +87,10 @@ public class ATOFluidSet extends BlockSet {
     private BaseFlowingFluid.Properties makeMoltenProperties(String name) {
         return new BaseFlowingFluid.Properties(
                 MOLTEN_TYPE,
-                DeferredHolder.create(Registries.FLUID, ResourceLocation.fromNamespaceAndPath(ATORegistry.FLUIDS.getNamespace(), String.format("molten_%s", name))),
-                DeferredHolder.create(Registries.FLUID, ResourceLocation.fromNamespaceAndPath(ATORegistry.FLUIDS.getNamespace(), String.format("flowing_molten_%s", name)))
-        ).bucket(DeferredHolder.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ATORegistry.FLUIDS.getNamespace(), String.format("molten_%s_bucket", name))))
-                .block(DeferredHolder.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(ATORegistry.FLUIDS.getNamespace(), String.format("molten_%s", name))))
+                DeferredHolder.create(Registries.FLUID, Identifier.fromNamespaceAndPath(ATORegistry.FLUIDS.getNamespace(), String.format("molten_%s", name))),
+                DeferredHolder.create(Registries.FLUID, Identifier.fromNamespaceAndPath(ATORegistry.FLUIDS.getNamespace(), String.format("flowing_molten_%s", name)))
+        ).bucket(DeferredHolder.create(Registries.ITEM, Identifier.fromNamespaceAndPath(ATORegistry.FLUIDS.getNamespace(), String.format("molten_%s_bucket", name))))
+                .block(DeferredHolder.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(ATORegistry.FLUIDS.getNamespace(), String.format("molten_%s", name))))
                 .tickRate(30)
                 .slopeFindDistance(4)
                 .levelDecreasePerBlock(2);

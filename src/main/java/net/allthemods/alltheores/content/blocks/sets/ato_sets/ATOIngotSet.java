@@ -10,7 +10,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.ArrayList;
@@ -28,7 +27,7 @@ public class ATOIngotSet extends ATOAlloySet {
     }
 
     public final ATOOreSet ORES;
-    public final MekanismSet MEK;
+    //public final MekanismSet MEK;
 
     // Item Tags
     public final TagKey<Item> RAW_TAG;
@@ -49,7 +48,7 @@ public class ATOIngotSet extends ATOAlloySet {
     public final DeferredHolder<Item, BlockItem> RAW_BLOCK_ITEM;
 
     public ATOIngotSet(String name, int fluidColor, String hardness, int veinSize, int minY, int maxY, int count) {
-        super(name, fluidColor);
+        super(name, fluidColor, ESetTypes.INGOT);
         instances.add(this);
 
         // Item Tags
@@ -68,9 +67,9 @@ public class ATOIngotSet extends ATOAlloySet {
         RAW_BLOCK = ATORegistry.BLOCKS.register(String.format("raw_%s_block", name), () -> new Block(Blocks.STONE.properties().strength(3.0f, 3.0f)));
 
         // Block Items
-        RAW_BLOCK_ITEM = blockItem(RAW_BLOCK);
+        RAW_BLOCK_ITEM = blockItem(String.format("raw_%s_block", name), RAW_BLOCK);
 
         ORES = new ATOOreSet(name, ESetTypes.INGOT, hardness, RAW, RAW_BLOCK, veinSize, minY, maxY, count);
-        MEK = ModList.get().isLoaded("mekanism") ? new MekanismSet(name, fluidColor, BLOCK) : null;
+        //MEK = ModList.get().isLoaded("mekanism") ? new MekanismSet(name, fluidColor, BLOCK) : null;
     }
 }

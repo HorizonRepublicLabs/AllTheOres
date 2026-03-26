@@ -60,6 +60,6 @@ public class VanillaGemSet extends VanillaSet {
         BLOCK = block;
 
         // Block Items
-        BLOCK_ITEM = block.asItem().getDefaultInstance().getItem();
+        BLOCK_ITEM = block.asItem();
     }
 }

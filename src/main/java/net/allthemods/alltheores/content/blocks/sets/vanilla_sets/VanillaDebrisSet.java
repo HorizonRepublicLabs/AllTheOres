@@ -68,8 +68,8 @@ public class VanillaDebrisSet extends VanillaSet {
         BLOCK = block;
 
         // Block Items
-        DEBRIS_ITEM = debris.asItem().getDefaultInstance().getItem();
-        BLOCK_ITEM = block.asItem().getDefaultInstance().getItem();
+        DEBRIS_ITEM = debris.asItem();
+        BLOCK_ITEM = block.asItem();
 
         FLUID = new ATOFluidSet(name, fluidColor);
     }

@@ -1,7 +1,7 @@
 package net.allthemods.alltheores.content.blocks.sets.ato_sets;
 
-import mekanism.api.chemical.Chemical;
-import mekanism.api.chemical.ChemicalBuilder;
+//import mekanism.api.chemical.Chemical;
+//import mekanism.api.chemical.ChemicalBuilder;
 import net.allthemods.alltheores.content.blocks.sets.BlockSet;
 import net.allthemods.alltheores.content.items.mekanism.Clump;
 import net.allthemods.alltheores.content.items.mekanism.Crystal;
@@ -24,10 +24,14 @@ public class MekanismSet extends BlockSet {
 
     private static final List<MekanismSet> instances = new ArrayList<>();
 
+    public MekanismSet(String name) {
+        super(name);
+    }
+
     public static List<MekanismSet> getMekanismSets() {
         return instances;
     }
-
+/*
     //Item Tags
     public final TagKey<Item> CRYSTAL_TAG;
     public final TagKey<Item> SHARD_TAG;
@@ -92,5 +96,5 @@ public class MekanismSet extends BlockSet {
                 (Math.max(0, (int) (((color >> 8) & 0xFF) * factor)) << 8) |  // Green
                 Math.max(0, (int) ((color & 0xFF) * factor)); // Blue
     }
-
+*/
 }
