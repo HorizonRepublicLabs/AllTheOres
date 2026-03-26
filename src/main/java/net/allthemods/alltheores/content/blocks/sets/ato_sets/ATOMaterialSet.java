@@ -4,6 +4,8 @@ import net.allthemods.alltheores.content.blocks.sets.BlockSet;
 import net.allthemods.alltheores.content.blocks.sets.ESetTypes;
 import net.allthemods.alltheores.infos.Reference;
 import net.allthemods.alltheores.registry.ATORegistry;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -72,19 +74,19 @@ public class ATOMaterialSet extends BlockSet {
                 DUST = item(String.format("%s_dust", name));
                 BLOCK = ATORegistry.BLOCKS.register(String.format("%s_block", name), () -> new Block(Block.Properties.of()
                         .strength(3.0f, 3.0f)
-                        .sound(SoundType.METAL)));
+                        .sound(SoundType.METAL).setId(ResourceKey.create(ATORegistry.BLOCKS.getRegistryKey(), Identifier.fromNamespaceAndPath(Reference.MOD_ID, String.format("%s_block", name))))));
                 break;
             case GEM:
                 DUST = item(String.format("%s_dust", name));
                 BLOCK = ATORegistry.BLOCKS.register(String.format("%s_block", name), () -> new Block(Block.Properties.of()
                         .strength(3.0f, 3.0f)
-                        .sound(SoundType.AMETHYST)));
+                        .sound(SoundType.AMETHYST).setId(ResourceKey.create(ATORegistry.BLOCKS.getRegistryKey(), Identifier.fromNamespaceAndPath(Reference.MOD_ID, String.format("%s_block", name))))));
                 break;
             case DUST:
                 DUST = item(name);
                 BLOCK = ATORegistry.BLOCKS.register(String.format("%s_block", name), () -> new Block(Block.Properties.of()
                         .strength(3.0f, 3.0f)
-                        .sound(SoundType.AMETHYST)));
+                        .sound(SoundType.AMETHYST).setId(ResourceKey.create(ATORegistry.BLOCKS.getRegistryKey(), Identifier.fromNamespaceAndPath(Reference.MOD_ID, String.format("%s_block", name))))));
                 break;
             default:
                 throw new IllegalArgumentException("Invalid Type: " + name);

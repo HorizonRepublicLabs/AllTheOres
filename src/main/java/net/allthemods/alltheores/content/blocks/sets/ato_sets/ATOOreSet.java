@@ -4,6 +4,7 @@ import net.allthemods.alltheores.content.blocks.ore.*;
 import net.allthemods.alltheores.content.blocks.sets.BlockSet;
 import net.allthemods.alltheores.content.blocks.sets.ESetTypes;
 import net.allthemods.alltheores.infos.Reference;
+import net.allthemods.alltheores.registry.ATORegistry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.Identifier;
@@ -133,12 +134,12 @@ public class ATOOreSet extends BlockSet {
         DROP = drop;
 
         // Blocks
-        STONE_ORE_BLOCK = BLOCKS.register(String.format("%s_ore", name), () -> new OreBlockStone(OreBlockStone.xpRange, BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.IRON_ORE).strength(3.0f, 3.0f)));
-        SLATE_ORE_BLOCK = BLOCKS.register(String.format("deepslate_%s_ore", name), () -> new OreBlockSlate(OreBlockSlate.xpRange, BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.DEEPSLATE_IRON_ORE).strength(4.5f, 3.0f)));
+        STONE_ORE_BLOCK = BLOCKS.register(String.format("%s_ore", name), () -> new OreBlockStone(OreBlockStone.xpRange, BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.IRON_ORE).strength(3.0f, 3.0f).setId(ResourceKey.create(ATORegistry.BLOCKS.getRegistryKey(), Identifier.fromNamespaceAndPath(Reference.MOD_ID, String.format("%s_block", name))))));
+        SLATE_ORE_BLOCK = BLOCKS.register(String.format("deepslate_%s_ore", name), () -> new OreBlockSlate(OreBlockSlate.xpRange, BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.DEEPSLATE_IRON_ORE).strength(4.5f, 3.0f).setId(ResourceKey.create(ATORegistry.BLOCKS.getRegistryKey(), Identifier.fromNamespaceAndPath(Reference.MOD_ID, String.format("%s_block", name))))));
 
-        NETHER_ORE_BLOCK = BLOCKS.register(String.format("nether_%s_ore", name), () -> new OreBlockNether(OreBlockNether.xpRange, BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.NETHER_QUARTZ_ORE).strength(3.0f, 3.0f)));
-        END_ORE_BLOCK = BLOCKS.register(String.format("end_%s_ore", name), () -> new OreBlockEnd(OreBlockEnd.xpRange, BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).strength(30.0f, 600.0f)));
-        OTHER_ORE_BLOCK = BLOCKS.register(String.format("other_%s_ore", name), () -> new OreBlockOther(OreBlockOther.xpRange, BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).strength(50.0f, -1.0f)));
+        NETHER_ORE_BLOCK = BLOCKS.register(String.format("nether_%s_ore", name), () -> new OreBlockNether(OreBlockNether.xpRange, BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.NETHER_QUARTZ_ORE).strength(3.0f, 3.0f).setId(ResourceKey.create(ATORegistry.BLOCKS.getRegistryKey(), Identifier.fromNamespaceAndPath(Reference.MOD_ID, String.format("%s_block", name))))));
+        END_ORE_BLOCK = BLOCKS.register(String.format("end_%s_ore", name), () -> new OreBlockEnd(OreBlockEnd.xpRange, BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).strength(30.0f, 600.0f).setId(ResourceKey.create(ATORegistry.BLOCKS.getRegistryKey(), Identifier.fromNamespaceAndPath(Reference.MOD_ID, String.format("%s_block", name))))));
+        OTHER_ORE_BLOCK = BLOCKS.register(String.format("other_%s_ore", name), () -> new OreBlockOther(OreBlockOther.xpRange, BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).strength(50.0f, -1.0f).setId(ResourceKey.create(ATORegistry.BLOCKS.getRegistryKey(), Identifier.fromNamespaceAndPath(Reference.MOD_ID, String.format("%s_block", name))))));
 
         DROP_BLOCK = drop_block;
 

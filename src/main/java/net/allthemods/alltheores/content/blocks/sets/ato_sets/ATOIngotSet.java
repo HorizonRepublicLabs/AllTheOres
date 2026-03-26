@@ -3,6 +3,8 @@ package net.allthemods.alltheores.content.blocks.sets.ato_sets;
 import net.allthemods.alltheores.content.blocks.sets.ESetTypes;
 import net.allthemods.alltheores.infos.Reference;
 import net.allthemods.alltheores.registry.ATORegistry;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -64,7 +66,7 @@ public class ATOIngotSet extends ATOAlloySet {
         RAW = item(String.format("raw_%s", name));
 
         // Blocks
-        RAW_BLOCK = ATORegistry.BLOCKS.register(String.format("raw_%s_block", name), () -> new Block(Blocks.STONE.properties().strength(3.0f, 3.0f)));
+        RAW_BLOCK = ATORegistry.BLOCKS.register(String.format("raw_%s_block", name), () -> new Block(Blocks.STONE.properties().strength(3.0f, 3.0f).setId(ResourceKey.create(ATORegistry.BLOCKS.getRegistryKey(), Identifier.fromNamespaceAndPath(Reference.MOD_ID, String.format("%s_block", name))))));
 
         // Block Items
         RAW_BLOCK_ITEM = blockItem(String.format("raw_%s_block", name), RAW_BLOCK);
