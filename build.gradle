@@ -103,10 +103,8 @@ dependencies {
 
     implementation "curse.maven:${mekanism}"
 
-    implementation "com.enderio:${ender_io_base}"
-    implementation "com.enderio:${ender_io_base}:api"
-    implementation "com.enderio:${ender_io_machines}"
-    implementation "com.enderio:${ender_io_machines}:api"
+    implementation "com.enderio:${ender_io}"
+    implementation "com.enderio:${ender_io}:api"
 
     implementation "curse.maven:${immersiveengineering}"
 

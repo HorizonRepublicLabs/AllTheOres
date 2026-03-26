@@ -1,18 +1,19 @@
 package net.allthemods.alltheores.datagen.data.recipe.enderio;
 
-import com.enderio.machines.common.recipe.SagMillingRecipe;
-import com.enderio.machines.data.recipes.SagMillRecipeProvider;
+import com.enderio.enderio.content.machines.sag_mill.SagMillingRecipe;
 import net.allthemods.alltheores.content.blocks.sets.ATOSetHelper;
 import net.allthemods.alltheores.infos.Reference;
 import net.allthemods.alltheores.registry.ATORegistry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.neoforged.neoforge.common.conditions.IConditionBuilder;
+import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 
 import java.util.List;
@@ -20,7 +21,7 @@ import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
-public class ATOEIOSagMillRecipeProvider extends SagMillRecipeProvider implements IConditionBuilder {
+public class ATOEIOSagMillRecipeProvider extends RecipeProvider {
 
     private static final int SAG_MILL_ENERGY = 2400;
 
@@ -101,6 +102,18 @@ public class ATOEIOSagMillRecipeProvider extends SagMillRecipeProvider implement
     }
 
     private void sagMill(String name, Ingredient input, List<SagMillingRecipe.OutputItem> outputs, SagMillingRecipe.BonusType bonusType, RecipeOutput recipeOutput) {
-        recipeOutput.withConditions(new ModLoadedCondition("enderio_machines")).accept(sagMillDir(name), new SagMillingRecipe(input, outputs, SAG_MILL_ENERGY, bonusType), null);
+        recipeOutput.withConditions(new ModLoadedCondition("enderio")).accept(sagMillDir(name), new SagMillingRecipe(input, outputs, SAG_MILL_ENERGY, bonusType), null);
+    }
+
+    private SagMillingRecipe.OutputItem output(ItemLike item) {
+        return SagMillingRecipe.OutputItem.of(item.asItem(), 1, 1.0f, false);
+    }
+
+    private SagMillingRecipe.OutputItem output(ItemLike item, int count) {
+        return SagMillingRecipe.OutputItem.of(item.asItem(), count, 1.0f, false);
+    }
+
+    private SagMillingRecipe.OutputItem output(ItemLike item, float chance) {
+        return SagMillingRecipe.OutputItem.of(item.asItem(), 1, chance, false);
     }
 }

@@ -1,25 +1,24 @@
 package net.allthemods.alltheores.datagen.data.recipe.enderio;
 
-import com.enderio.machines.common.recipe.AlloySmeltingRecipe;
-import com.enderio.machines.data.recipes.AlloyRecipeProvider;
+import com.enderio.enderio.content.machines.alloy.AlloySmeltingRecipe;
 import net.allthemods.alltheores.infos.Reference;
 import net.allthemods.alltheores.registry.ATORegistry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import net.neoforged.neoforge.common.crafting.SizedIngredient;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-public class ATOEIOAlloySmelterRecipeProvider extends AlloyRecipeProvider implements IConditionBuilder {
+public class ATOEIOAlloySmelterRecipeProvider extends RecipeProvider {
 
     private static final int ALLOY_SMELTER_ENERGY = 4800;
 
@@ -85,6 +84,6 @@ public class ATOEIOAlloySmelterRecipeProvider extends AlloyRecipeProvider implem
     }
 
     private void alloySmelter(ItemStack output, List<SizedIngredient> inputs, int energy, float experience, RecipeOutput recipeOutput) {
-        recipeOutput.withConditions(new ModLoadedCondition("enderio_machines")).accept(alloySmeltingDir(BuiltInRegistries.ITEM.getKey(output.getItem()).getPath()), new AlloySmeltingRecipe(inputs, output, energy, experience), null);
+        recipeOutput.withConditions(new ModLoadedCondition("enderio")).accept(alloySmeltingDir(BuiltInRegistries.ITEM.getKey(output.getItem()).getPath()), new AlloySmeltingRecipe(inputs, output, energy, experience), null);
     }
 }
