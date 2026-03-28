@@ -2,15 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "alltheores:ore_hammers"
-    },
-    {
-      "tag": "c:ores/salt"
-    }
+    "#alltheores:ore_hammers",
+    "#c:ores/salt"
   ],
   "result": {
     "count": 2,
-    "id": "alltheores:salt"
+    "id": "alltheores:salt_dust"
   }
 }

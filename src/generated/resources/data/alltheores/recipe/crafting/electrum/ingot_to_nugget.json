@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:ingots/electrum"
+  ],
+  "result": {
+    "count": 9,
+    "id": "alltheores:electrum_nugget"
+  }
+}

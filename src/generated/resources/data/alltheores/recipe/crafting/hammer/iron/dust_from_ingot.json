@@ -2,15 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "alltheores:ore_hammers"
-    },
-    {
-      "tag": "c:ingots/iron"
-    }
+    "#alltheores:ore_hammers",
+    "#c:ingots/iron"
   ],
   "result": {
-    "count": 1,
     "id": "alltheores:iron_dust"
   }
 }

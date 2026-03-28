@@ -2,20 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "a": {
-      "tag": "c:ingots/osmium"
-    },
-    "h": {
-      "tag": "alltheores:ore_hammers"
-    }
+    "a": "#c:ingots/osmium",
+    "h": "#alltheores:ore_hammers"
   },
   "pattern": [
-    "   ",
     "ha ",
     "a  "
   ],
   "result": {
-    "count": 1,
     "id": "alltheores:osmium_plate"
   }
 }

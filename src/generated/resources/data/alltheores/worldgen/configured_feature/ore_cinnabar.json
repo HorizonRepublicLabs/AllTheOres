@@ -39,15 +39,6 @@
           "block": "minecraft:end_stone",
           "predicate_type": "minecraft:block_match"
         }
-      },
-      {
-        "state": {
-          "Name": "alltheores:other_cinnabar_ore"
-        },
-        "target": {
-          "predicate_type": "minecraft:tag_match",
-          "tag": "allthemodium:ancient_stone"
-        }
       }
     ]
   }

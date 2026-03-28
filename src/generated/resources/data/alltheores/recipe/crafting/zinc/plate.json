@@ -2,20 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "a": {
-      "tag": "c:ingots/zinc"
-    },
-    "h": {
-      "tag": "alltheores:ore_hammers"
-    }
+    "a": "#c:ingots/zinc",
+    "h": "#alltheores:ore_hammers"
   },
   "pattern": [
-    "   ",
     "ha ",
     "a  "
   ],
   "result": {
-    "count": 1,
     "id": "alltheores:zinc_plate"
   }
 }

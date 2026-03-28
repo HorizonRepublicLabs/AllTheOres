@@ -2,15 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "alltheores:ore_hammers"
-    },
-    {
-      "tag": "c:ores/sulfur"
-    }
+    "#alltheores:ore_hammers",
+    "#c:ores/sulfur"
   ],
   "result": {
     "count": 2,
-    "id": "alltheores:sulfur"
+    "id": "alltheores:sulfur_dust"
   }
 }

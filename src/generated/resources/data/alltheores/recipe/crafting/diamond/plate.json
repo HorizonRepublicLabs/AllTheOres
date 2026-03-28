@@ -2,20 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "a": {
-      "tag": "c:gems/diamond"
-    },
-    "h": {
-      "tag": "alltheores:ore_hammers"
-    }
+    "a": "#c:gems/diamond",
+    "h": "#alltheores:ore_hammers"
   },
   "pattern": [
-    "   ",
     "ha ",
     "a  "
   ],
   "result": {
-    "count": 1,
     "id": "alltheores:diamond_plate"
   }
 }

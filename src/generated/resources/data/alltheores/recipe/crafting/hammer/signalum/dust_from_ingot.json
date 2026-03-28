@@ -2,15 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "alltheores:ore_hammers"
-    },
-    {
-      "tag": "c:ingots/signalum"
-    }
+    "#alltheores:ore_hammers",
+    "#c:ingots/signalum"
   ],
   "result": {
-    "count": 1,
     "id": "alltheores:signalum_dust"
   }
 }

@@ -16,6 +16,10 @@
     "#c:ores/cinnabar",
     "#c:ores/fluorite",
     "#c:ores/salt",
-    "#c:ores/sulfur"
+    "#c:ores/sulfur",
+    "#c:ores/copper",
+    "#c:ores/iron",
+    "#c:ores/gold",
+    "#c:ores/diamond"
   ]
 }

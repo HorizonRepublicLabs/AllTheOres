@@ -1,6 +1,5 @@
 {
   "values": [
-    "#c:nuggets/copper",
     "#c:nuggets/aluminum",
     "#c:nuggets/lead",
     "#c:nuggets/nickel",
@@ -19,6 +18,9 @@
     "#c:nuggets/enderium",
     "#c:nuggets/lumium",
     "#c:nuggets/signalum",
-    "#c:nuggets/constantan"
+    "#c:nuggets/constantan",
+    "#c:nuggets/copper",
+    "#c:nuggets/iron",
+    "#c:nuggets/gold"
   ]
 }
