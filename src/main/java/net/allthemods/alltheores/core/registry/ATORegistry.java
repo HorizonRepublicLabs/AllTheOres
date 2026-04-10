@@ -28,11 +28,11 @@ public final class ATORegistry {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = ATORegistry.TABS.register("creative_tab", () -> CreativeModeTab.builder()
             .title(Component.translatable(String.format(Locale.ROOT, "creative_tab.%s", ATO.MOD_ID)))
             .icon(() -> Materials.ALUMINUM.get(BlockPartType.STONE_ORE).getHolder().get().asItem().getDefaultInstance())
-            .displayItems((param, out) -> 
-                ATORegistry.ITEMS.getEntries().stream()
-                        .map(Supplier::get)
-                        .map(Item::getDefaultInstance)
-                        .forEach(out::accept))
+            .displayItems((param, out) ->
+                    ATORegistry.ITEMS.getEntries().stream()
+                            .map(Supplier::get)
+                            .map(Item::getDefaultInstance)
+                            .forEach(out::accept))
             .build()
     );
     
@@ -44,7 +44,7 @@ public final class ATORegistry {
     
     
     public static final TagKey<Block> ORES_IN_GROUND_END_STONE = TagKey.create(Registries.BLOCK, ATO.c("ores_in_ground/end_stone"));
-    // public static final TagKey<Block> ORES_IN_GROUND_ANCIENT_STONE = TagKey.create(Registries.BLOCK, ATO.c("ores_in_ground/ancient_stone")); //TODO: Uncomment once Modium is ported to 26.1
+    public static final TagKey<Block> ORES_IN_GROUND_ANCIENT_STONE = TagKey.create(Registries.BLOCK, ATO.c("ores_in_ground/ancient_stone"));
     
     public static final TagKey<Item> PLATES = TagKey.create(Registries.ITEM, ATO.c("plates"));
     public static final TagKey<Item> GEARS = TagKey.create(Registries.ITEM, ATO.c("gears"));

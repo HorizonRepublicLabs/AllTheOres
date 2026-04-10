@@ -2,7 +2,6 @@ package net.allthemods.alltheores.common.item;
 
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.inventory.tooltip.TooltipComponent;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemInstance;
 import net.minecraft.world.item.ItemStack;
@@ -15,7 +14,6 @@ import net.allthemods.alltheores.core.registry.ATORegistry;
 import org.jspecify.annotations.Nullable;
 
 import java.util.Locale;
-import java.util.Optional;
 import java.util.function.Consumer;
 
 public class OreHammer extends Item {
@@ -28,7 +26,7 @@ public class OreHammer extends Item {
     public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
         int durability = stack.getOrDefault(DataComponents.MAX_DAMAGE, 0);
         int damage = stack.getOrDefault(DataComponents.DAMAGE, 0);
-        if (durability <= 0 || damage <= 0) return ; 
+        if (durability <= 0 || damage <= 0) return;
         builder.accept(Component.literal(String.format(Locale.ROOT, "[%d/%d]", durability - damage, durability)));
     }
     
