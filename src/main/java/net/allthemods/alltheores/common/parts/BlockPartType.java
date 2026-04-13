@@ -35,7 +35,7 @@ public abstract class BlockPartType extends MaterialPartType<Block, BlockPart, B
         
         @Override
         protected void constructTags(BlockPart part, TagOutput<Block> output) {
-            output.addTag(Tags.Blocks.ORES_IN_GROUND_STONE, part.getTag());
+            output.add(Tags.Blocks.ORES_IN_GROUND_STONE, part.getHolder().get());
         }
     };
     
@@ -52,7 +52,7 @@ public abstract class BlockPartType extends MaterialPartType<Block, BlockPart, B
         
         @Override
         protected void constructTags(BlockPart part, TagOutput<Block> output) {
-            output.addTag(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE, part.getTag());
+            output.add(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE, part.getHolder().get());
         }
     };
     
@@ -69,7 +69,7 @@ public abstract class BlockPartType extends MaterialPartType<Block, BlockPart, B
         
         @Override
         protected void constructTags(BlockPart part, TagOutput<Block> output) {
-            output.addTag(Tags.Blocks.ORES_IN_GROUND_NETHERRACK, part.getTag());
+            output.add(Tags.Blocks.ORES_IN_GROUND_NETHERRACK, part.getHolder().get());
         }
     };
     
@@ -87,28 +87,27 @@ public abstract class BlockPartType extends MaterialPartType<Block, BlockPart, B
         
         @Override
         protected void constructTags(BlockPart part, TagOutput<Block> output) {
-            output.addTag(ATORegistry.ORES_IN_GROUND_END_STONE, part.getTag());
+            output.add(ATORegistry.ORES_IN_GROUND_END_STONE, part.getHolder().get());
         }
     };
     
-    //TODO: Uncomment once Modium is ported to 26.1
-    //    public static final BlockPartType OTHER_ORE = new BlockPartType(Tags.Blocks.ORES) {
-    //        
-    //        @Override
-    //        public TagKey<Block> getTag(String group) {
-    //            return TagKey.create(Registries.BLOCK, ATO.c("ores/" + group));
-    //        }
-    //        
-    //        @Override
-    //        public DeferredHolder<Block, ? extends Block> createHolder(String group, UnaryOperator<BlockBehaviour.Properties> blockProperties) {
-    //            return this.construct(String.format(Locale.ROOT, "other_%s_ore", group), blockProperties, UnaryOperator.identity());
-    //        }
-    //        
-    //        @Override
-    //        protected void constructTags(BlockPart part, Function<TagKey<Block>, TagAppender<Block, Block>> factory) {
-    //            factory.apply(ATORegistry.ORES_IN_GROUND_ANCIENT_STONE).addTag(part.getTag());
-    //        }
-    //    };
+    public static final BlockPartType OTHER_ORE = new BlockPartType(Tags.Blocks.ORES) {
+        
+        @Override
+        public TagKey<Block> getTag(String group) {
+            return TagKey.create(Registries.BLOCK, ATO.c("ores/" + group));
+        }
+        
+        @Override
+        public DeferredHolder<Block, ? extends Block> createHolder(String group, UnaryOperator<BlockBehaviour.Properties> blockProperties) {
+            return this.construct(String.format(Locale.ROOT, "other_%s_ore", group), blockProperties, UnaryOperator.identity());
+        }
+        
+        @Override
+        protected void constructTags(BlockPart part, TagOutput<Block> output) {
+            output.add(ATORegistry.ORES_IN_GROUND_ANCIENT_STONE, part.getHolder().get());
+        }
+    };
     
     public static final BlockPartType RAW_BLOCK = new BlockPartType(Tags.Blocks.STORAGE_BLOCKS) {
         

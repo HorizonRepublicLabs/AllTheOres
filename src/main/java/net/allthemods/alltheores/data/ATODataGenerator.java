@@ -8,6 +8,7 @@ import net.allthemods.alltheores.api.ATO;
 import net.allthemods.alltheores.data.provider.ATOLangProvider;
 import net.allthemods.alltheores.data.provider.ATOModelProvider;
 import net.allthemods.alltheores.data.provider.ATORecipeProvider;
+import net.allthemods.alltheores.data.provider.loot.ATOLootProvider;
 import net.allthemods.alltheores.data.provider.tags.ATOBlockTagsProvider;
 import net.allthemods.alltheores.data.provider.tags.ATOItemTagsProvider;
 import net.allthemods.alltheores.data.provider.worldgen.ATOWorldGenProvider;
@@ -23,6 +24,7 @@ public class ATODataGenerator {
         event.createProvider(ATOItemTagsProvider::new);
         event.createProvider(ATOLangProvider::new);
         event.createProvider(ATOModelProvider::new);
+        event.createProvider(ATOLootProvider::create);
         event.createProvider(ATORecipeProvider.Runner::new);
         event.createDatapackRegistryObjects(ATOWorldGenProvider.BUILDER);
     }

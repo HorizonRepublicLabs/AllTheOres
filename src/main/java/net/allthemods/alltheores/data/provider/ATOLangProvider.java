@@ -29,6 +29,8 @@ public class ATOLangProvider extends LanguageProvider {
         this.add(ATORegistry.PLATINUM_ORE_HAMMER.get(), "Platinum Ore Hammer");
         
         Material.forAll(material -> material.forEach(part -> {
+            if (part.isVanilla()) return;
+            
             DeferredHolder<?, ?> holder = part.getHolder();
             String path = holder.getId().getPath();
             Object value = holder.get();

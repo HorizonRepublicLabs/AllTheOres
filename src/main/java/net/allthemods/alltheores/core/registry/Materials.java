@@ -27,6 +27,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(24, 4, -64, 320)
             .build();
     
@@ -44,6 +45,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(24, 3, -64, 56)
             .build();
     
@@ -61,6 +63,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(24, 3, -64, 56)
             .build();
     
@@ -78,6 +81,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(24, 3, -64, 56)
             .build();
     
@@ -95,6 +99,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(24, 1, -64, 36)
             .build();
     
@@ -112,6 +117,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(24, 3, -64, 56)
             .build();
     
@@ -129,6 +135,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(24, 4, -64, 196)
             .build();
     
@@ -146,6 +153,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(24, 2, -64, 16)
             .build();
     
@@ -163,6 +171,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(24, 3, -64, 126)
             .build();
     
@@ -180,6 +189,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(10, 4, -64, 32)
             .build();
     
@@ -281,6 +291,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(7, 3, -64, 228)
             .build();
     
@@ -292,6 +303,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(7, 3, -64, 196)
             .build();
     
@@ -303,6 +315,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(7, 3, -64, 296)
             .build();
     
@@ -314,6 +327,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(27, 3, -64, 228)
             .build();
     
@@ -325,6 +339,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(27, 3, -64, 228)
             .build();
     
@@ -335,6 +350,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(27, 3, -64, 228)
             .build();
     
@@ -345,6 +361,7 @@ public final class Materials {
             .add(BlockPartType.DEEPSLATE_ORE)
             .add(BlockPartType.NETHER_ORE)
             .add(BlockPartType.END_ORE)
+            .add(BlockPartType.OTHER_ORE)
             .worldgen(17, 1, -64, 25)
             .build();
     

@@ -23,7 +23,10 @@ base {
     archivesName = mod_id
 }
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(25)
+java { 
+    toolchain.languageVersion = JavaLanguageVersion.of(25)
+    withSourcesJar()
+}
 
 neoForge {
     version = project.neo_version
@@ -71,14 +74,28 @@ configurations {
 }
 
 repositories {
+    mavenLocal() // ATM
     maven { // JEI
         name = "Jared's maven"
         url = "https://maven.blamejared.com/"
     }
+    maven { // Jade
+        name = "Modrinth Maven"
+        url = "https://api.modrinth.com/maven"
+    }
+    maven { // GeckoLib
+        name = 'GeckoLib'
+        url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/"
+    }
 }
 
 dependencies {
+    compileOnly "mezz.jei:jei-26.1.1-neoforge-api:${jei_version}"
+    runtimeOnly "mezz.jei:jei-26.1.1-neoforge:${jei_version}"
     
+    implementation "net.allthemods.allthemodium:allthemodium:4.0.0" // must be pushed to maven local!
+    implementation "maven.modrinth:jade:26.0.6+neoforge" // here cuz of atm
+    implementation "com.geckolib:geckolib-neoforge-26.1:5.5" // here cuz of atm
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
@@ -104,6 +121,9 @@ publishing {
     publications {
         register('mavenJava', MavenPublication) {
             from components.java
+            groupId = 'net.allthemods.alltheores'
+            artifactId = 'alltheores'
+            version = mod_version
         }
     }
     repositories {
