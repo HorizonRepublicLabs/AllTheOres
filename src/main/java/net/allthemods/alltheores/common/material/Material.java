@@ -93,6 +93,10 @@ public class Material {
         return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ATO.id(this.group + "_end"));
     }
     
+    public ResourceKey<BiomeModifier> getOtherBiomeModifierKey() {
+        return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ATO.id(this.group + "_other"));
+    }
+    
     public boolean has(MaterialPartType<?, ?, ?> type) {
         if (type instanceof BlockPartType block) return this.blocks.containsKey(block);
         if (type instanceof ItemPartType item) return this.items.containsKey(item);
