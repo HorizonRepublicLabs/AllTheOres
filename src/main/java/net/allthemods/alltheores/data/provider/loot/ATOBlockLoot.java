@@ -52,10 +52,13 @@ public class ATOBlockLoot extends BlockLootSubProvider {
         
         ItemPart raw = material.get(ItemPartType.RAW);
         ItemPart gem = material.get(ItemPartType.GEM);
+        ItemPart dust = material.get(ItemPartType.DUST);
         if (raw != null) {
             this.add(ore.getHolder().get(), b -> this.createOreDrop(b, raw.getHolder().get()));
         } else if (gem != null) {
             this.add(ore.getHolder().get(), b -> this.createOreDrop(b, gem.getHolder().get()));
+        } else if (dust != null) {
+            this.add(ore.getHolder().get(), b -> this.createOreDrop(b, dust.getHolder().get()));
         }
     }
     

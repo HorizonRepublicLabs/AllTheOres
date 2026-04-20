@@ -90,8 +90,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly "mezz.jei:jei-26.1.1-neoforge-api:${jei_version}"
-    runtimeOnly "mezz.jei:jei-26.1.1-neoforge:${jei_version}"
+    compileOnly "mezz.jei:jei-26.1.2-neoforge-api:${jei_version}"
+    runtimeOnly "mezz.jei:jei-26.1.2-neoforge:${jei_version}"
     
     implementation "net.allthemods.allthemodium:allthemodium:4.0.0" // must be pushed to maven local!
     implementation "maven.modrinth:jade:26.0.6+neoforge" // here cuz of atm
