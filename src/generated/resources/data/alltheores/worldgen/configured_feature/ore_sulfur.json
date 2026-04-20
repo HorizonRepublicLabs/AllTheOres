@@ -39,6 +39,15 @@
           "block": "minecraft:end_stone",
           "predicate_type": "minecraft:block_match"
         }
+      },
+      {
+        "state": {
+          "Name": "alltheores:other_sulfur_ore"
+        },
+        "target": {
+          "block": "allthemodium:ancient_stone",
+          "predicate_type": "minecraft:block_match"
+        }
       }
     ]
   }

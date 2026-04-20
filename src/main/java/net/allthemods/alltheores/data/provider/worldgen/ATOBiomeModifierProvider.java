@@ -12,6 +12,7 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
+import net.allthemods.allthemodium.core.registry.ATMTags;
 import net.allthemods.alltheores.common.material.Material;
 import net.allthemods.alltheores.common.parts.BlockPartType;
 
@@ -47,6 +48,14 @@ public final class ATOBiomeModifierProvider {
             if (ATOBiomeModifierProvider.shouldGenerate(material, BlockPartType.END_ORE)) {
                 context.register(material.getEndBiomeModifierKey(), new BiomeModifiers.AddFeaturesBiomeModifier(
                         biomes.getOrThrow(Tags.Biomes.IS_END),
+                        feature,
+                        GenerationStep.Decoration.UNDERGROUND_ORES
+                ));
+            }
+            
+            if (ATOBiomeModifierProvider.shouldGenerate(material, BlockPartType.OTHER_ORE)) {
+                context.register(material.getOtherBiomeModifierKey(), new BiomeModifiers.AddFeaturesBiomeModifier(
+                        biomes.getOrThrow(ATMTags.Biomes.IS_OTHER),
                         feature,
                         GenerationStep.Decoration.UNDERGROUND_ORES
                 ));
