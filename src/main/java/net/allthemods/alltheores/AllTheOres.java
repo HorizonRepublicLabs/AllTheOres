@@ -1,5 +1,8 @@
 package net.allthemods.alltheores;
 
+import net.allthemods.allthemodium.core.registry.ATMTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.biome.Biome;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.javafmlmod.FMLModContainer;
@@ -15,8 +18,9 @@ import org.slf4j.Logger;
 public class AllTheOres {
     
     public static final Logger LOGGER = LogUtils.getLogger();
-    
+
     public AllTheOres(final IEventBus bus, final FMLModContainer container) {
         ATORegistry.register(bus);
+
     }
 }

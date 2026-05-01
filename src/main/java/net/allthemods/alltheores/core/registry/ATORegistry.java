@@ -1,5 +1,9 @@
 package net.allthemods.alltheores.core.registry;
 
+import net.allthemods.allthemodium.api.ATM;
+import net.allthemods.allthemodium.core.registry.ATMTags;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.level.biome.Biome;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -50,11 +54,18 @@ public final class ATORegistry {
     public static final TagKey<Item> GEARS = TagKey.create(Registries.ITEM, ATO.c("gears"));
     
     public static final TagKey<Item> ORE_HAMMER = TagKey.create(Registries.ITEM, ATO.id("ore_hammers"));
-    
+    public static final TagKey<Biome> IS_OTHER = neo("is_other"); // c namespace to match other dimension
+
     public static void register(IEventBus bus) {
         Materials.init();
         ATORegistry.BLOCKS.register(bus);
         ATORegistry.ITEMS.register(bus);
         ATORegistry.TABS.register(bus);
+    }
+    public static Identifier c(String path) {
+        return Identifier.fromNamespaceAndPath("c", path);
+    }
+    private static TagKey<Biome> neo(String path) {
+        return TagKey.create(Registries.BIOME, c(path));
     }
 }
