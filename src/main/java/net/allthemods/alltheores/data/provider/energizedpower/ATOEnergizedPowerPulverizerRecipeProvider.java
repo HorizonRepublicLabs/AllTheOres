@@ -25,6 +25,8 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ATOEnergizedPowerPulverizerRecipeProvider implements DataProvider {
+    // Energized Power treats each percentage entry as one output roll. The advanced list is
+    // the same recipe's boosted roll table for advanced pulverizers.
     private static final List<Double> INGOT_ORE_CHANCES = List.of(1.0, 1.0, 0.25);
     private static final List<Double> INGOT_ORE_ADVANCED_CHANCES = List.of(1.0, 1.0, 0.5, 0.25);
     private static final List<Double> RAW_CHANCES = List.of(1.0, 0.25);
@@ -49,6 +51,7 @@ public class ATOEnergizedPowerPulverizerRecipeProvider implements DataProvider {
                 this.recipe(material.get(ItemPartType.INGOT).getTag(), this.dustItem(material), SINGLE_CHANCE))));
 
         ATOMaterialHelper.applyToIngot(material -> {
+            // Energized Power already provides tin pulverizer recipes.
             if (material == Materials.TIN) return;
 
             futures.add(this.save(output, material, "ore",
