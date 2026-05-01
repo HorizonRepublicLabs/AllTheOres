@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ],
+  "type": "enderio:alloy_smelting",
+  "energy": 4800,
+  "experience": 0.3,
+  "inputs": [
+    {
+      "count": 3,
+      "ingredient": "#c:ingots/lead"
+    },
+    {
+      "count": 1,
+      "ingredient": "#c:ingots/platinum"
+    },
+    {
+      "count": 2,
+      "ingredient": "#c:ender_pearls"
+    }
+  ],
+  "output": {
+    "count": 4,
+    "id": "alltheores:enderium_ingot"
+  }
+}
