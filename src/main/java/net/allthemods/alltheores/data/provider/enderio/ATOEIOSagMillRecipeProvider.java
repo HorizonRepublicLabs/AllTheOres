@@ -134,9 +134,7 @@ public class ATOEIOSagMillRecipeProvider implements DataProvider {
         recipe.addProperty("type", "enderio:sag_milling");
         recipe.addProperty("energy", SAG_MILL_ENERGY);
 
-        JsonObject inputJson = new JsonObject();
-        inputJson.addProperty("tag", input.location().toString());
-        recipe.add("input", inputJson);
+        recipe.addProperty("input", "#" + input.location());
 
         JsonArray outputJson = new JsonArray();
         outputs.forEach(outputJson::add);

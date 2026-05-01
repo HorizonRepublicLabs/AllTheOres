@@ -11,15 +11,15 @@
   "inputs": [
     {
       "count": 4,
-      "tag": "c:dusts/glowstone"
+      "ingredient": "#c:dusts/glowstone"
     },
     {
       "count": 1,
-      "tag": "c:ingots/silver"
+      "ingredient": "#c:ingots/silver"
     },
     {
       "count": 3,
-      "tag": "c:ingots/tin"
+      "ingredient": "#c:ingots/tin"
     }
   ],
   "output": {

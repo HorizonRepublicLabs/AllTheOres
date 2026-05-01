@@ -7,9 +7,7 @@
   ],
   "type": "enderio:sag_milling",
   "energy": 2400,
-  "input": {
-    "tag": "c:ores/tin"
-  },
+  "input": "#c:ores/tin",
   "outputs": [
     {
       "item": {

@@ -11,11 +11,11 @@
   "inputs": [
     {
       "count": 2,
-      "tag": "c:ingots/iron"
+      "ingredient": "#c:ingots/iron"
     },
     {
       "count": 1,
-      "tag": "c:ingots/nickel"
+      "ingredient": "#c:ingots/nickel"
     }
   ],
   "output": {

@@ -11,11 +11,11 @@
   "inputs": [
     {
       "count": 1,
-      "tag": "c:ingots/gold"
+      "ingredient": "#c:ingots/gold"
     },
     {
       "count": 1,
-      "tag": "c:ingots/silver"
+      "ingredient": "#c:ingots/silver"
     }
   ],
   "output": {

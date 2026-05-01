@@ -115,7 +115,7 @@ public class ATOEIOAlloySmelterRecipeProvider implements DataProvider {
     private JsonObject input(TagKey<Item> tag, int count) {
         JsonObject input = new JsonObject();
         input.addProperty("count", count);
-        input.addProperty("tag", tag.location().toString());
+        input.addProperty("ingredient", "#" + tag.location());
         return input;
     }
 

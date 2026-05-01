@@ -11,15 +11,15 @@
   "inputs": [
     {
       "count": 3,
-      "tag": "c:ingots/copper"
+      "ingredient": "#c:ingots/copper"
     },
     {
       "count": 1,
-      "tag": "c:ingots/silver"
+      "ingredient": "#c:ingots/silver"
     },
     {
       "count": 4,
-      "tag": "c:dusts/redstone"
+      "ingredient": "#c:dusts/redstone"
     }
   ],
   "output": {

@@ -11,15 +11,15 @@
   "inputs": [
     {
       "count": 3,
-      "tag": "c:ingots/lead"
+      "ingredient": "#c:ingots/lead"
     },
     {
       "count": 1,
-      "tag": "c:ingots/platinum"
+      "ingredient": "#c:ingots/platinum"
     },
     {
       "count": 2,
-      "tag": "c:ender_pearls"
+      "ingredient": "#c:ender_pearls"
     }
   ],
   "output": {
