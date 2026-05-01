@@ -19,7 +19,7 @@ import java.util.function.Consumer;
 public class OreHammer extends Item {
     
     public OreHammer(Properties properties) {
-        super(properties);
+        super(properties.setNoCombineRepair());
     }
     
     @Override
