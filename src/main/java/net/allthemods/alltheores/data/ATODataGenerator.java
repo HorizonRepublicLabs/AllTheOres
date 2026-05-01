@@ -10,6 +10,7 @@ import net.allthemods.alltheores.data.provider.ATOModelProvider;
 import net.allthemods.alltheores.data.provider.ATORecipeProvider;
 import net.allthemods.alltheores.data.provider.enderio.ATOEIOAlloySmelterRecipeProvider;
 import net.allthemods.alltheores.data.provider.enderio.ATOEIOSagMillRecipeProvider;
+import net.allthemods.alltheores.data.provider.energizedpower.ATOEnergizedPowerPulverizerRecipeProvider;
 import net.allthemods.alltheores.data.provider.loot.ATOLootProvider;
 import net.allthemods.alltheores.data.provider.tags.ATOBlockTagsProvider;
 import net.allthemods.alltheores.data.provider.tags.ATOItemTagsProvider;
@@ -30,6 +31,7 @@ public class ATODataGenerator {
         event.createProvider(ATORecipeProvider.Runner::new);
         event.createProvider(ATOEIOSagMillRecipeProvider::new);
         event.createProvider(ATOEIOAlloySmelterRecipeProvider::new);
+        event.createProvider(ATOEnergizedPowerPulverizerRecipeProvider::new);
         event.createDatapackRegistryObjects(ATOWorldGenProvider.BUILDER);
     }
 }

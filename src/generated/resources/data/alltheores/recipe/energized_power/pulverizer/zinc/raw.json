@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "energizedpower"
+    }
+  ],
+  "type": "energizedpower:pulverizer",
+  "ingredient": "#c:raw_materials/zinc",
+  "result": {
+    "percentages": [
+      1.0,
+      0.25
+    ],
+    "percentagesAdvanced": [
+      1.0,
+      0.5
+    ],
+    "result": {
+      "id": "alltheores:zinc_dust"
+    }
+  }
+}
