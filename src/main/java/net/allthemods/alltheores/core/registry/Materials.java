@@ -8,7 +8,7 @@ import net.allthemods.alltheores.common.material.Material;
 import net.allthemods.alltheores.common.parts.BlockPartType;
 import net.allthemods.alltheores.common.parts.ItemPartType;
 
-// TODO: Add .add(BlockPartType.ANCHIENT_ORE) where applicable once ATM updates to 26.1
+// TODO: Add .add(BlockPartType.ANCHIENT_ORE) where applicable once ATM updates to 26.2
 public final class Materials {
     
     public static void init() { }
@@ -373,7 +373,7 @@ public final class Materials {
             .add(ItemPartType.GEAR)
             .add(ItemPartType.PLATE)
             .add(ItemPartType.ROD)
-            .add(BlockPartType.BLOCK, Blocks.COPPER_BLOCK)
+            .add(BlockPartType.BLOCK, Blocks.COPPER_BLOCK.weathering().unaffected())
             .add(BlockPartType.RAW_BLOCK, Blocks.RAW_COPPER_BLOCK)
             .add(BlockPartType.STONE_ORE, Blocks.COPPER_ORE)
             .add(BlockPartType.DEEPSLATE_ORE, Blocks.DEEPSLATE_COPPER_ORE)

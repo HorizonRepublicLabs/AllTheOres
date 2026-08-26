@@ -11,8 +11,8 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTes
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
-import net.allthemods.allthemodium.core.registry.ATMBlocks;
 import net.allthemods.alltheores.common.material.Material;
+import net.allthemods.alltheores.core.registry.ATORegistry;
 import net.allthemods.alltheores.common.parts.BlockPartType;
 
 import java.util.ArrayList;
@@ -31,7 +31,7 @@ public final class ATOConfiguredFeatureProvider {
             ATOConfiguredFeatureProvider.addTarget(material, BlockPartType.DEEPSLATE_ORE, new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), targets);
             ATOConfiguredFeatureProvider.addTarget(material, BlockPartType.NETHER_ORE, new BlockMatchTest(Blocks.NETHERRACK), targets);
             ATOConfiguredFeatureProvider.addTarget(material, BlockPartType.END_ORE, new BlockMatchTest(Blocks.END_STONE), targets);
-            ATOConfiguredFeatureProvider.addTarget(material, BlockPartType.OTHER_ORE, new BlockMatchTest(ATMBlocks.ANCIENT_STONE.get()), targets);
+            ATOConfiguredFeatureProvider.addTarget(material, BlockPartType.OTHER_ORE, new TagMatchTest(ATORegistry.ANCIENT_STONE), targets);
             
             if (targets.isEmpty()) return;
             

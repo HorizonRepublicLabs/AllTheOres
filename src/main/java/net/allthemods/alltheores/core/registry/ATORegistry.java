@@ -1,7 +1,5 @@
 package net.allthemods.alltheores.core.registry;
 
-import net.allthemods.allthemodium.api.ATM;
-import net.allthemods.allthemodium.core.registry.ATMTags;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.biome.Biome;
 import net.neoforged.bus.api.IEventBus;
@@ -49,6 +47,7 @@ public final class ATORegistry {
     
     public static final TagKey<Block> ORES_IN_GROUND_END_STONE = TagKey.create(Registries.BLOCK, ATO.c("ores_in_ground/end_stone"));
     public static final TagKey<Block> ORES_IN_GROUND_ANCIENT_STONE = TagKey.create(Registries.BLOCK, ATO.c("ores_in_ground/ancient_stone"));
+    public static final TagKey<Block> ANCIENT_STONE = TagKey.create(Registries.BLOCK, ATO.id("ancient_stone"));
     
     public static final TagKey<Item> PLATES = TagKey.create(Registries.ITEM, ATO.c("plates"));
     public static final TagKey<Item> GEARS = TagKey.create(Registries.ITEM, ATO.c("gears"));

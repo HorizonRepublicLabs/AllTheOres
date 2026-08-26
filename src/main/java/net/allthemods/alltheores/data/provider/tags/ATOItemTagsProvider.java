@@ -22,13 +22,13 @@ public class ATOItemTagsProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider registries) {
         this.tag(ATORegistry.ORE_HAMMER)
-                .add(ATORegistry.COPPER_ORE_HAMMER.get())
-                .add(ATORegistry.IRON_ORE_HAMMER.get())
-                .add(ATORegistry.BRONZE_ORE_HAMMER.get())
-                .add(ATORegistry.INVAR_ORE_HAMMER.get())
-                .add(ATORegistry.PLATINUM_ORE_HAMMER.get());
+                .add(ATORegistry.COPPER_ORE_HAMMER.getKey())
+                .add(ATORegistry.IRON_ORE_HAMMER.getKey())
+                .add(ATORegistry.BRONZE_ORE_HAMMER.getKey())
+                .add(ATORegistry.INVAR_ORE_HAMMER.getKey())
+                .add(ATORegistry.PLATINUM_ORE_HAMMER.getKey());
         
-        UniqueTagOutput<Item> output = new UniqueTagOutput<>(this::tag, BuiltInRegistries.ITEM::getKey);
+        UniqueTagOutput<Item> output = new UniqueTagOutput<>(this::tag, item -> BuiltInRegistries.ITEM.getResourceKey(item).orElseThrow());
         Material.forAll(material -> material.createItemTags(output));
     }
 }

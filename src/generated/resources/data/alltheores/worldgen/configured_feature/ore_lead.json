@@ -41,18 +41,12 @@
         }
       },
       {
-        "neoforge:conditions": [
-          {
-            "type": "neoforge:mod_loaded",
-            "modid": "allthemodium"
-          }
-        ],
         "state": {
           "Name": "alltheores:other_lead_ore"
         },
         "target": {
-          "tag": "alltheores:ancient_stone",
-          "predicate_type": "minecraft:tag_match"
+          "predicate_type": "minecraft:tag_match",
+          "tag": "alltheores:ancient_stone"
         }
       }
     ]

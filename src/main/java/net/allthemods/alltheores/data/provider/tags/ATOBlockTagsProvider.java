@@ -20,7 +20,7 @@ public class ATOBlockTagsProvider extends BlockTagsProvider {
     
     @Override
     protected void addTags(HolderLookup.Provider registries) {
-        UniqueTagOutput<Block> output = new UniqueTagOutput<>(this::tag, BuiltInRegistries.BLOCK::getKey);
+        UniqueTagOutput<Block> output = new UniqueTagOutput<>(this::tag, block -> BuiltInRegistries.BLOCK.getResourceKey(block).orElseThrow());
         Material.forAll(material -> material.createBlockTags(output));
     }
 }

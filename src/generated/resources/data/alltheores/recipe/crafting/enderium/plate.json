@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "a": "#c:ingots/enderium",
     "h": "#alltheores:ore_hammers"

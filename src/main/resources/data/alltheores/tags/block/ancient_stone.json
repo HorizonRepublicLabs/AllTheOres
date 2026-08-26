@@ -5,10 +5,10 @@
       "modid": "allthemodium"
     }
   ],
-    "values": [
-      {
-        "id": "allthemodium:ancient_stone",
-        "required": false
-      }
-      ]
+  "values": [
+    {
+      "id": "allthemodium:ancient_stone",
+      "required": false
+    }
+  ]
 }

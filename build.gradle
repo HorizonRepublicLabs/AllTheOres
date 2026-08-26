@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.141'
+    id 'net.neoforged.moddev' version '2.0.144'
     id 'idea'
 }
 
@@ -87,10 +87,9 @@ repositories {
 }
 
 dependencies {
-    implementation "curse.maven:jei-238222:8014757"
-    implementation "curse.maven:allthemodium-364466:7972894"
-    runtimeOnly "curse.maven:jade-324717:7938398"
-    runtimeOnly "curse.maven:geckolib-388172:7913641"
+    implementation "curse.maven:jei-238222:8740420"
+    runtimeOnly "curse.maven:jade-324717:8650925"
+    runtimeOnly "curse.maven:geckolib-388172:8327604"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

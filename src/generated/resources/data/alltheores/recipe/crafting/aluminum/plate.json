@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "a": "#c:ingots/aluminum",
     "h": "#alltheores:ore_hammers"

@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "a": "#c:storage_blocks/iron",
     "s": "#c:rods/wooden"

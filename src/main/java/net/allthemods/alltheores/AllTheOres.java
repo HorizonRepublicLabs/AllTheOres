@@ -1,8 +1,5 @@
 package net.allthemods.alltheores;
 
-import net.allthemods.allthemodium.core.registry.ATMTags;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.level.biome.Biome;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.javafmlmod.FMLModContainer;
