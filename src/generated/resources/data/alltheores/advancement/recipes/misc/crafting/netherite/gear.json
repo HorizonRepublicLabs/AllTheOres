@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/netherite/gear"
+        "recipes": "alltheores:crafting/netherite/gear"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

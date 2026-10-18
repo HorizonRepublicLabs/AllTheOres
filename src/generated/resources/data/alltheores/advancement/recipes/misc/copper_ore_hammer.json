@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:copper_ore_hammer"
+        "recipes": "alltheores:copper_ore_hammer"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/electrum/gear"
+        "recipes": "alltheores:crafting/electrum/gear"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

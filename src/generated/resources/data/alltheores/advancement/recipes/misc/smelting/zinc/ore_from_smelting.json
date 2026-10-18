@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:smelting/zinc/ore_from_smelting"
+        "recipes": "alltheores:smelting/zinc/ore_from_smelting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

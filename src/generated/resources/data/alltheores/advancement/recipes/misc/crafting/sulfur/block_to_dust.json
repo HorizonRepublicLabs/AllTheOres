@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/sulfur/block_to_dust"
+        "recipes": "alltheores:crafting/sulfur/block_to_dust"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

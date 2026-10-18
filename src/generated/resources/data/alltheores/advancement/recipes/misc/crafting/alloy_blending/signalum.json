@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/alloy_blending/signalum"
+        "recipes": "alltheores:crafting/alloy_blending/signalum"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

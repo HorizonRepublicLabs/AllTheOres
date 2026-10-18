@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/aluminum/plate"
+        "recipes": "alltheores:crafting/aluminum/plate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

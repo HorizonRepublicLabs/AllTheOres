@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/zinc/plate"
+        "recipes": "alltheores:crafting/zinc/plate"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

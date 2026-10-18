@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/signalum/plate"
+        "recipes": "alltheores:crafting/signalum/plate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/hammer/platinum/dust_from_ore"
+        "recipes": "alltheores:crafting/hammer/platinum/dust_from_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

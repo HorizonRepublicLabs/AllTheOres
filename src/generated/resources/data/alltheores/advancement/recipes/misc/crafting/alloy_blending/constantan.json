@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/alloy_blending/constantan"
+        "recipes": "alltheores:crafting/alloy_blending/constantan"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

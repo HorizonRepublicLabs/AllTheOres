@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/tin/gear"
+        "recipes": "alltheores:crafting/tin/gear"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

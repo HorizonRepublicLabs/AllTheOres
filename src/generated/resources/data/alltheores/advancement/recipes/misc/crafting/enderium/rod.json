@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/enderium/rod"
+        "recipes": "alltheores:crafting/enderium/rod"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

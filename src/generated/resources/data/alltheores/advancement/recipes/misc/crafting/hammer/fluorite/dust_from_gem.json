@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/hammer/fluorite/dust_from_gem"
+        "recipes": "alltheores:crafting/hammer/fluorite/dust_from_gem"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

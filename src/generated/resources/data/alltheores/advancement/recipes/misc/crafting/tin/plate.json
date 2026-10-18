@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/tin/plate"
+        "recipes": "alltheores:crafting/tin/plate"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

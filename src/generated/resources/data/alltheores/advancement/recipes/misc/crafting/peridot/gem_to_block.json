@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/peridot/gem_to_block"
+        "recipes": "alltheores:crafting/peridot/gem_to_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

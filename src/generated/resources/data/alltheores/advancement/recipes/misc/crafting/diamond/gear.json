@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/diamond/gear"
+        "recipes": "alltheores:crafting/diamond/gear"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

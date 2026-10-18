@@ -2,12 +2,11 @@ package net.allthemods.alltheores.data.provider;
 
 import net.neoforged.neoforge.common.Tags;
 
-import net.minecraft.core.HolderGetter;
-import net.minecraft.core.HolderLookup;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.PackOutput;
+import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
@@ -26,16 +25,9 @@ import net.allthemods.alltheores.common.parts.ItemPartType;
 import net.allthemods.alltheores.core.registry.ATORegistry;
 import net.allthemods.alltheores.core.registry.Materials;
 
-import java.util.concurrent.CompletableFuture;
-
 public class ATORecipeProvider extends RecipeProvider {
-    private final HolderGetter<Item> items;
-    private final RecipeOutput output;
-    
-    public ATORecipeProvider(HolderLookup.Provider lookupProvider, RecipeOutput output) {
-        super(lookupProvider, output);
-        this.items = lookupProvider.lookupOrThrow(Registries.ITEM);
-        this.output = output;
+    public ATORecipeProvider(BootstrapContext<Recipe<?>> recipes, BootstrapContext<Advancement> advancements) {
+        super(recipes, advancements);
     }
     
     @Override
@@ -364,22 +356,6 @@ public class ATORecipeProvider extends RecipeProvider {
                 }
                 builder.requires(this.tag);
             }
-        }
-    }
-    
-    public static class Runner extends RecipeProvider.Runner {
-        public Runner(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
-            super(output, lookupProvider);
-        }
-        
-        @Override
-        protected RecipeProvider createRecipeProvider(HolderLookup.Provider lookupProvider, RecipeOutput output) {
-            return new ATORecipeProvider(lookupProvider, output);
-        }
-        
-        @Override
-        public String getName() {
-            return "AllTheOres recipes";
         }
     }
 }

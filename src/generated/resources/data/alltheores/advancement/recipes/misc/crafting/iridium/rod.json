@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/iridium/rod"
+        "recipes": "alltheores:crafting/iridium/rod"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/signalum/rod"
+        "recipes": "alltheores:crafting/signalum/rod"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/platinum/rod"
+        "recipes": "alltheores:crafting/platinum/rod"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

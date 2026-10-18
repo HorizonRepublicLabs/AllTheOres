@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/copper/rod"
+        "recipes": "alltheores:crafting/copper/rod"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

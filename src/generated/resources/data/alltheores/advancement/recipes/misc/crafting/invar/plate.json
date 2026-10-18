@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/invar/plate"
+        "recipes": "alltheores:crafting/invar/plate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

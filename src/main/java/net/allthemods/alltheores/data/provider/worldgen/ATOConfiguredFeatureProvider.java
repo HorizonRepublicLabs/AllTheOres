@@ -1,12 +1,11 @@
 package net.allthemods.alltheores.data.provider.worldgen;
 
 import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.BlockReplacement;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.OreFeature;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
@@ -21,12 +20,12 @@ import java.util.List;
 public final class ATOConfiguredFeatureProvider {
     private ATOConfiguredFeatureProvider() { }
     
-    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
+    public static void bootstrap(BootstrapContext<Feature> context) {
         Material.forAll(material -> {
             Material.WorldGen worldGen = material.getWorldGen();
             if (worldGen == null) return;
             
-            List<OreConfiguration.TargetBlockState> targets = new ArrayList<>();
+            List<BlockReplacement> targets = new ArrayList<>();
             ATOConfiguredFeatureProvider.addTarget(material, BlockPartType.STONE_ORE, new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), targets);
             ATOConfiguredFeatureProvider.addTarget(material, BlockPartType.DEEPSLATE_ORE, new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), targets);
             ATOConfiguredFeatureProvider.addTarget(material, BlockPartType.NETHER_ORE, new BlockMatchTest(Blocks.NETHERRACK), targets);
@@ -35,12 +34,7 @@ public final class ATOConfiguredFeatureProvider {
             
             if (targets.isEmpty()) return;
             
-            FeatureUtils.register(
-                    context,
-                    material.getConfiguredOreFeatureKey(),
-                    Feature.ORE,
-                    new OreConfiguration(targets, worldGen.veinSize())
-            );
+            context.register(material.getConfiguredOreFeatureKey(), new OreFeature(targets, worldGen.veinSize()));
         });
     }
     
@@ -48,11 +42,11 @@ public final class ATOConfiguredFeatureProvider {
             Material material,
             BlockPartType type,
             RuleTest target,
-            List<OreConfiguration.TargetBlockState> targets
+            List<BlockReplacement> targets
     ) {
         material.apply(type, part -> {
             if (part.isVanilla()) return;
-            targets.add(OreConfiguration.target(target, part.getHolder().get().defaultBlockState()));
+            targets.add(new BlockReplacement(target, part.getHolder().get().defaultBlockState()));
         });
     }
 }

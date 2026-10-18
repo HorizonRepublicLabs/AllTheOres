@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/bronze/gear"
+        "recipes": "alltheores:crafting/bronze/gear"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

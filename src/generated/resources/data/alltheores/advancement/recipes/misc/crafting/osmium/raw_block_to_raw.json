@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/osmium/raw_block_to_raw"
+        "recipes": "alltheores:crafting/osmium/raw_block_to_raw"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:smelting/uranium/raw_from_blasting"
+        "recipes": "alltheores:smelting/uranium/raw_from_blasting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

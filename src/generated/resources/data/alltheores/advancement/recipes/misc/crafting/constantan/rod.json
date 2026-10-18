@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/constantan/rod"
+        "recipes": "alltheores:crafting/constantan/rod"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

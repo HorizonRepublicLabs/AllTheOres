@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/electrum/rod"
+        "recipes": "alltheores:crafting/electrum/rod"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

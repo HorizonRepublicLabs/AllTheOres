@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/hammer/netherite/scrap_from_debris"
+        "recipes": "alltheores:crafting/hammer/netherite/scrap_from_debris"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

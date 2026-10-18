@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/uranium/gear"
+        "recipes": "alltheores:crafting/uranium/gear"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

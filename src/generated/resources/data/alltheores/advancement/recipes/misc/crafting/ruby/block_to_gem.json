@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/ruby/block_to_gem"
+        "recipes": "alltheores:crafting/ruby/block_to_gem"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/hammer/sapphire/dust_from_gem"
+        "recipes": "alltheores:crafting/hammer/sapphire/dust_from_gem"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/hammer/tin/dust_from_raw"
+        "recipes": "alltheores:crafting/hammer/tin/dust_from_raw"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

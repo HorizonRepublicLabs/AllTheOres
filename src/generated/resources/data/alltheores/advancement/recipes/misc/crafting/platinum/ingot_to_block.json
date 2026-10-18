@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/platinum/ingot_to_block"
+        "recipes": "alltheores:crafting/platinum/ingot_to_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

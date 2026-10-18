@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/lead/nugget_to_ingot"
+        "recipes": "alltheores:crafting/lead/nugget_to_ingot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

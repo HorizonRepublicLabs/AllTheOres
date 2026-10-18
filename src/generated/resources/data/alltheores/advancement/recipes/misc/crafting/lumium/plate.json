@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/lumium/plate"
+        "recipes": "alltheores:crafting/lumium/plate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

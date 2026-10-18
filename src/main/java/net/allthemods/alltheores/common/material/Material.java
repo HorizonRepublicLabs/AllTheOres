@@ -9,7 +9,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 import net.allthemods.alltheores.api.ATO;
@@ -73,8 +73,8 @@ public class Material {
         return this.worldGen;
     }
     
-    public ResourceKey<ConfiguredFeature<?, ?>> getConfiguredOreFeatureKey() {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ATO.id("ore_" + this.group));
+    public ResourceKey<Feature> getConfiguredOreFeatureKey() {
+        return ResourceKey.create(Registries.FEATURE, ATO.id("ore_" + this.group));
     }
     
     public ResourceKey<PlacedFeature> getPlacedOreFeatureKey() {

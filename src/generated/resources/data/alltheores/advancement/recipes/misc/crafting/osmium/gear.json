@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/osmium/gear"
+        "recipes": "alltheores:crafting/osmium/gear"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

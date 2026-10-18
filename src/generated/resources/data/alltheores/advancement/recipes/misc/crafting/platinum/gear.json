@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/platinum/gear"
+        "recipes": "alltheores:crafting/platinum/gear"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

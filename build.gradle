@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.144'
+    id 'net.neoforged.moddev' version '2.0.148'
     id 'idea'
 }
 
@@ -74,6 +74,7 @@ configurations {
 }
 
 repositories {
+    maven { url 'https://maven.blamejared.com' }
     exclusiveContent {
         forRepository {
             maven {
@@ -87,9 +88,7 @@ repositories {
 }
 
 dependencies {
-    implementation "curse.maven:jei-238222:8740420"
-    runtimeOnly "curse.maven:jade-324717:8650925"
-    runtimeOnly "curse.maven:geckolib-388172:8327604"
+    runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
@@ -97,6 +96,7 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             minecraft_version      : minecraft_version,
             minecraft_version_range: minecraft_version_range,
             neo_version            : neo_version,
+            neo_version_range      : neo_version_range,
             mod_id                 : mod_id,
             mod_name               : mod_name,
             mod_license            : mod_license,

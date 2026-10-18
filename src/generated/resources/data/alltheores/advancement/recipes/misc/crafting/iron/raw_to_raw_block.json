@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/iron/raw_to_raw_block"
+        "recipes": "alltheores:crafting/iron/raw_to_raw_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

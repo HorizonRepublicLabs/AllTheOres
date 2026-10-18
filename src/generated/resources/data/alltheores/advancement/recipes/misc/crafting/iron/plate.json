@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/iron/plate"
+        "recipes": "alltheores:crafting/iron/plate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

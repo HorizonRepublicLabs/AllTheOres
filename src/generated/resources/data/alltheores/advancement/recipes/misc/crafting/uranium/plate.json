@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/uranium/plate"
+        "recipes": "alltheores:crafting/uranium/plate"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

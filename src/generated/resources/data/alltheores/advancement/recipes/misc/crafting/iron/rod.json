@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/iron/rod"
+        "recipes": "alltheores:crafting/iron/rod"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

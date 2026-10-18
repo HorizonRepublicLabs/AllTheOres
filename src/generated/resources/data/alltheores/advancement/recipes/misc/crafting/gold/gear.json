@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/gold/gear"
+        "recipes": "alltheores:crafting/gold/gear"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

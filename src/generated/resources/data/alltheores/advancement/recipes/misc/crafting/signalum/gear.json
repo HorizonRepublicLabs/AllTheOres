@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/signalum/gear"
+        "recipes": "alltheores:crafting/signalum/gear"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/nickel/plate"
+        "recipes": "alltheores:crafting/nickel/plate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

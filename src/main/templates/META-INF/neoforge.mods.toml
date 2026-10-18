@@ -20,7 +20,7 @@ Commonly found modded ores in one easy spot!.\nBrought to you by AllTheMods!
 [[dependencies.${ mod_id }]]
 modId = "neoforge"
 type = "required"
-versionRange = "[${neo_version},)"
+versionRange = "${neo_version_range}"
 ordering = "NONE"
 side = "BOTH"
 

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/alloy_blending/enderium"
+        "recipes": "alltheores:crafting/alloy_blending/enderium"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

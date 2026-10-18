@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/enderium/gear"
+        "recipes": "alltheores:crafting/enderium/gear"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

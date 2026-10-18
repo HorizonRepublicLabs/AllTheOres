@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/nickel/ingot_to_nugget"
+        "recipes": "alltheores:crafting/nickel/ingot_to_nugget"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

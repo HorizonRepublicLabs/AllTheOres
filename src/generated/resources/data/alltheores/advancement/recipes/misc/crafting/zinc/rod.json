@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/zinc/rod"
+        "recipes": "alltheores:crafting/zinc/rod"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

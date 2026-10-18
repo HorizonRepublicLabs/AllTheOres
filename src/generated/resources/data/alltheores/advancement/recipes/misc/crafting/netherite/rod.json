@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/netherite/rod"
+        "recipes": "alltheores:crafting/netherite/rod"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

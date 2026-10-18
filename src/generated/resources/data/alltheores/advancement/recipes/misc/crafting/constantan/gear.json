@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/constantan/gear"
+        "recipes": "alltheores:crafting/constantan/gear"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

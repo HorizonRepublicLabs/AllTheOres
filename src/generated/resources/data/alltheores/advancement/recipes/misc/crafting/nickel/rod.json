@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/nickel/rod"
+        "recipes": "alltheores:crafting/nickel/rod"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/iridium/gear"
+        "recipes": "alltheores:crafting/iridium/gear"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

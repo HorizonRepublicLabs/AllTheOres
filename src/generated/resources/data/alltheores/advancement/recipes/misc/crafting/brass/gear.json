@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/brass/gear"
+        "recipes": "alltheores:crafting/brass/gear"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

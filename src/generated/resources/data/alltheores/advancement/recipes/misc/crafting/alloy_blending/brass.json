@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/alloy_blending/brass"
+        "recipes": "alltheores:crafting/alloy_blending/brass"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

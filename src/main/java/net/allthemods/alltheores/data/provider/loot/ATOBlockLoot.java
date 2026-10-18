@@ -2,8 +2,8 @@ package net.allthemods.alltheores.data.provider.loot;
 
 import net.neoforged.neoforge.registries.DeferredHolder;
 
-import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
+import net.minecraft.data.loot.LootTableSubProvider;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
@@ -18,19 +18,18 @@ import net.allthemods.alltheores.common.parts.ItemPartType;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-import java.util.function.BiConsumer;
 
 public class ATOBlockLoot extends BlockLootSubProvider {
     private final Map<ResourceKey<LootTable>, LootTable.Builder> tables = new HashMap<>();
     
-    protected ATOBlockLoot(HolderLookup.Provider registries) {
-        super(Set.of(), FeatureFlags.DEFAULT_FLAGS, registries);
+    public ATOBlockLoot(LootTableSubProvider.Context output) {
+        super(Set.of(), FeatureFlags.DEFAULT_FLAGS, output);
     }
     
     @Override
-    public void generate(BiConsumer<ResourceKey<LootTable>, LootTable.Builder> output) {
+    public void run() {
         this.generate();
-        this.tables.forEach(output);
+        this.tables.forEach(this.output::accept);
     }
     
     @Override

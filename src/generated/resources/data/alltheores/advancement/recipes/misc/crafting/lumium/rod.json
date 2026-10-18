@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/lumium/rod"
+        "recipes": "alltheores:crafting/lumium/rod"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

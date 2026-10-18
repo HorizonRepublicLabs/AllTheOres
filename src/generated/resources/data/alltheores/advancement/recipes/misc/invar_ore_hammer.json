@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:invar_ore_hammer"
+        "recipes": "alltheores:invar_ore_hammer"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

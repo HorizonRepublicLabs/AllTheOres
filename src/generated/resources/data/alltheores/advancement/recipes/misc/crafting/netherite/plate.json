@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/netherite/plate"
+        "recipes": "alltheores:crafting/netherite/plate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

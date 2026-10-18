@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alltheores:crafting/hammer/netherite/dust_from_ingot"
+        "recipes": "alltheores:crafting/hammer/netherite/dust_from_ingot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
